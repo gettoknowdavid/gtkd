@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       colors: {
         yellow: '#f8da3d',
-      }
+      },
+      fontFamily: {
+        sans: ['var(--font-poppins)']
+      },
     },
   },
   plugins: [],

@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@contentful/rich-text-react-renderer': ^15.12.1
+  '@next/font': ^13.0.4
   '@types/node': 18.11.7
   '@types/react': 18.0.24
   '@types/react-dom': 18.0.8
@@ -30,6 +31,7 @@ specifiers:
 
 dependencies:
   '@contentful/rich-text-react-renderer': 15.12.1_biqbaboplfbrettd7655fr4n2y
+  '@next/font': 13.0.4
   classnames: 2.3.2
   clsx: 1.2.1
   concurrently: 7.5.0
@@ -323,6 +325,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.0.4:
+    resolution: {integrity: sha512-csZhVqe870p7XE03WfbDLzjVwdBAWxe6/lWGQosfqY/XN5tsmfDLpj442veicfCiiuF7/ydSnAAJxH8PQVBVWQ==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.0.4:
     resolution: {integrity: sha512-SD9H+/zuV3L0oHIhsDdFkDqFtg6pIHtqRUPlsrNdOsmWXgMlSzxBmwt2ta4kyrazS62BQu7XRUG++ZyODS7AWg==}

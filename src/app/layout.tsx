@@ -2,7 +2,12 @@
 import '../styles/dist.css';
 import React from 'react';
 import Header from '@/organisms/header';
-import '../styles/global.css';
+import { Poppins } from '@next/font/google';
+
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-poppins',
+});
 
 export default function RootLayout({
   children,
@@ -10,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="en" className={`${poppins.variable} font-sans`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
