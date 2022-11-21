@@ -1,0 +1,58 @@
+$height: 3.938rem;
+
+$main-color: black;
+$accent-color: #f8da3d;
+$hover-color: #fbe88b57;
+
+$small: 280px;
+$medium: 600px;
+$large: 1024px;
+
+$border: 2px solid;
+
+.hamburger-div {
+  position: relative;
+  float: right;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: $height;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: $border;
+  padding-left: 0.938rem;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: white;
+    z-index: 22;
+  }
+
+  .drawer-toggle {
+    z-index: 22;
+
+    @media screen and (min-width: $large) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $large) {
+    display: none;
+  }
+}
+
+.div-animate {
+  position: absolute;
+  z-index: 21;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: calc(3.938rem - 2px);
+  width: 0;
+  background-color: $accent-color;
+}
