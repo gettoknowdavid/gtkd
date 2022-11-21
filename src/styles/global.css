@@ -5,18 +5,8 @@
 html,
 body {
   font-family: 'Poppins'sans-serif;
-  background-color: #f8da3d;
-}
-
-@media (min-width:280px) {
-  :root {
-    font-size: calc(1rem + ((1vw - 2.8px) * 0.3448));
-    min-height: 0vw;
-  }
-}
-
-@media (min-width: 1440px) {
-  :root {
-    font-size: 20px;
-  }
+  background-color: black;
+  color: white;
+  /* border-color: #f8da3d; */
+  /* background-color: #f8da3d; */
 }

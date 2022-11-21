@@ -43,7 +43,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: var(--font-poppins);
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -513,25 +513,19 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.list-item {
+  display: list-item;
+}
+
 .font-sans {
-  font-family: var(--font-poppins);
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
 body {
   font-family: 'Poppins'sans-serif;
-  background-color: #f8da3d;
-}
-
-@media (min-width:280px) {
-  :root {
-    font-size: calc(1rem + ((1vw - 2.8px) * 0.3448));
-    min-height: 0vw;
-  }
-}
-
-@media (min-width: 1440px) {
-  :root {
-    font-size: 20px;
-  }
+  background-color: black;
+  color: white;
+  /* border-color: #f8da3d; */
+  /* background-color: #f8da3d; */
 }
