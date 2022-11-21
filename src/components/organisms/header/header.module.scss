@@ -1,0 +1,105 @@
+$height: 3.938rem;
+
+$main-color: black;
+$accent-color: #f8da3d;
+$hover-color: #fbe88b57;
+
+$small: 280px;
+$medium: 600px;
+$large: 1024px;
+
+$border: 2px solid;
+
+.header {
+  height: $height;
+  width: 100%;
+  position: fixed;
+  background-color: $main-color;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+}
+
+.navList {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin nav-item {
+  height: $height;
+  width: 25%;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: $border;
+  padding-left: 0.938rem;
+  font-weight: 600;
+  border-right: $border;
+  transition: color 1s, background-color 1s;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media screen and (min-width: $large) {
+    display: flex;
+  }
+}
+
+.list-item {
+  @include nav-item;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.active-list-item {
+  @include nav-item;
+  background-color: $hover-color;
+}
+
+.logo-div {
+  position: absolute;
+  height: $height;
+  top: 0;
+  left: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-right: $border;
+  border-bottom: $border;
+  transition: color 1s, background-color 1s;
+
+  &:hover {
+    color: black;
+    background-color: $hover-color;
+  }
+
+  @media screen and (min-width: $large) {
+    border-bottom: none;
+    width: 25%;
+  }
+
+  h1 {
+    margin: 0;
+    padding-left: 0.938rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+
+    @media screen and (min-width: $medium) {
+      border-bottom: none;
+    }
+    @media screen and (min-width: $large) {
+      display: flex;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      border-bottom: none;
+    }
+  }
+}
