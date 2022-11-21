@@ -1,3 +1,6 @@
+// tailwind.config.js
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,7 +15,7 @@ module.exports = {
         yellow: '#f8da3d',
       },
       fontFamily: {
-        sans: ['var(--font-poppins)']
+        sans: ['var(--font-poppins)', ...fontFamily.sans]
       },
     },
   },

@@ -1,29 +1,31 @@
 /* eslint-disable @next/next/no-head-element */
-import '../styles/dist.css';
-import React from 'react';
+import Drawer from '@/organisms/drawer';
 import Header from '@/organisms/header';
 import { Poppins } from '@next/font/google';
+import React from 'react';
+import AppContextProvider from '../contexts';
+import '../styles/dist.css';
+
+type Props = { children: React.ReactNode };
 
 const poppins = Poppins({
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700', '900'],
   variable: '--font-poppins',
+  subsets: ['latin'],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout(props: Props) {
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      {/* <head></head> */}
       <body>
-        <main>
-          <Header />
-          {children}
-        </main>
+        <AppContextProvider>
+          <main>
+            <Header />
+            <Drawer />
+            {props.children}
+          </main>
+        </AppContextProvider>
       </body>
     </html>
   );
