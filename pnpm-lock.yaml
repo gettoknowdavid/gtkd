@@ -19,6 +19,7 @@ specifiers:
   gsap: ^3.11.3
   hamburger-react: ^2.5.0
   next: latest
+  normalize.css: ^8.0.1
   path: ^0.12.7
   phosphor-react: ^1.4.1
   postcss: ^8.4.19
@@ -44,6 +45,7 @@ dependencies:
   gsap: 3.11.3
   hamburger-react: 2.5.0_react@18.2.0
   next: 13.0.4_m5sxuueb27gk6ddc5gums6vtgq
+  normalize.css: 8.0.1
   phosphor-react: 1.4.1_react@18.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -2443,6 +2445,10 @@ packages:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /normalize.css/8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
+    dev: false
 
   /number-is-nan/1.0.1:
     resolution: {integrity: sha512-4jbtZXNAsfZbAHiiqjLPBiCl16dES1zI4Hpzzxw61Tk+loF+sBDBKx1ICKKKwIqQ7M0mFn1TmkN7euSncWgHiQ==}

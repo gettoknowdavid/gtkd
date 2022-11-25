@@ -30,6 +30,7 @@
     "gsap": "^3.11.3",
     "hamburger-react": "^2.5.0",
     "next": "latest",
+    "normalize.css": "^8.0.1",
     "phosphor-react": "^1.4.1",
     "react": "latest",
     "react-dom": "latest",

@@ -1,6 +1,5 @@
 'use client';
 
-import Hamburger from '@/atoms/hamburger';
 import { NAV_ITEMS } from '@/lib/nav_items';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -10,14 +9,13 @@ function Header() {
   const pathname = usePathname();
 
   return (
-    <header className={styles.header}>
+    <header className={styles['header']}>
       <Link href={'/'} className={styles['logo-div']}>
-        <h1>gtkd</h1>
+        <h1>David Michael II</h1>
+        <p>Frontend Developer</p>
       </Link>
 
-      <Hamburger />
-
-      <ul className={styles.navList}>
+      <ul className={styles['nav-list']}>
         {NAV_ITEMS.map((item) => {
           const isActive = item.slug === pathname;
 
@@ -27,7 +25,7 @@ function Header() {
               href={item.slug}
               className={styles[isActive ? 'active-list-item' : 'list-item']}
             >
-              {item.id === 0 ? '' : item.title}
+              {item.title}
             </Link>
           );
         })}
