@@ -2,7 +2,6 @@
 import Header from '@/organisms/header';
 import { Poppins } from '@next/font/google';
 import React from 'react';
-import AppContextProvider from '../contexts';
 import '../styles/dist.css';
 import styles from './styles.module.scss';
 
@@ -18,15 +17,13 @@ export default function RootLayout(props: Props) {
   return (
     <html lang="en" className={`${poppins.variable} font-sans`}>
       <body>
-        <AppContextProvider>
-          <div className={styles['layout']}>
-            <Header />
-            {/* <Frame /> */}
-            <main className={styles['main-content']}>
-              <div className={styles['inner-content']}>{props.children}</div>
-            </main>
-          </div>
-        </AppContextProvider>
+        <div className={styles['layout']}>
+          <Header />
+          {/* <Frame /> */}
+          <main className={styles['main-content']}>
+            <div className={styles['inner-content']}>{props.children}</div>
+          </main>
+        </div>
       </body>
     </html>
   );
