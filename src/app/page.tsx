@@ -1,19 +1,57 @@
-import type { NextPage } from 'next';
+import PageTitle from '@/atoms/page-title';
+import { hygraph } from '@/lib/api';
+import { RichText } from '@graphcms/rich-text-react-renderer';
 import styles from './styles.module.scss';
 
-const Page: NextPage = () => {
+type Bio = {
+  biographiesConnection: {
+    edges: {
+      node: {
+        content: {
+          raw: any;
+        };
+      };
+    }[];
+  };
+};
+
+async function getBio() {
+  const data = await hygraph.request<Bio>(
+    `
+      query Biographies {
+        biographiesConnection {
+          edges {
+            node {
+              content {
+                raw
+              }
+            }
+          }
+        }
+      } 
+    `,
+  );
+
+  return data?.biographiesConnection?.edges[0].node;
+}
+
+export default async function Page() {
+  const bio = await getBio();
+
   return (
-    <section className={styles['home-section']}>
-      <div className={styles['column']} />
-      <div className={styles['column']}>
-        <h1 className={styles['name']}>
-          About
-          <br />
-          me
-        </h1>
+    <section>
+      <PageTitle title="Home" />
+      <div className={styles['bio']}>
+        <div className={styles['bio-content']}>
+          <h1>Gettoknowdavid</h1>
+          <RichText
+            content={bio.content.raw}
+            renderers={{
+              p: ({ children }) => <p>{children}</p>,
+            }}
+          />
+        </div>
       </div>
     </section>
   );
-};
-
-export default Page;
+}

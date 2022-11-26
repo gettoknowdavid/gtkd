@@ -1,0 +1,26 @@
+$small: 280px;
+$medium: 600px;
+$large: 1024px;
+
+.placeholder {
+  position: absolute;
+  height: calc(100vh - (2.956rem * 2));
+  align-items: flex-end;
+  display: none;
+
+  @media screen and (min-width: $large) {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 14rem;
+    font-weight: 900;
+    line-height: 1;
+    opacity: 0.06;
+    letter-spacing: -1rem;
+
+    @media screen and (min-width: $large) {
+      font-size: 14rem;
+    }
+  }
+}

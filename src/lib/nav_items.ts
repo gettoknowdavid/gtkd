@@ -1,8 +1,4 @@
-type NavItemType = {
-  id: number;
-  title: string;
-  slug: string;
-};
+import { NavItemType } from 'src/types';
 
 export const NAV_ITEMS: NavItemType[] = [
   { id: 0, slug: '/', title: 'Home' },

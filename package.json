@@ -19,24 +19,20 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.12.1",
-    "@next/font": "^13.0.4",
-    "classnames": "^2.3.2",
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
+    "@next/font": "latest",
     "clsx": "^1.2.1",
-    "concurrently": "^7.5.0",
-    "contentful-import": "^8.5.8",
-    "date-fns": "^2.29.3",
+    "concurrently": "^7.6.0",
     "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
     "gsap": "^3.11.3",
-    "hamburger-react": "^2.5.0",
     "next": "latest",
     "normalize.css": "^8.0.1",
     "phosphor-react": "^1.4.1",
     "react": "latest",
     "react-dom": "latest",
     "sass": "^1.56.1",
-    "styled-components": "^5.3.6",
-    "styled-jsx": "^5.1.0"
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "18.11.7",
@@ -46,7 +42,6 @@
     "autoprefixer": "^10.4.13",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",
-    "path": "^0.12.7",
     "postcss": "^8.4.19",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",

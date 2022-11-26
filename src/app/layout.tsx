@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-head-element */
+import Frame from '@/molecules/frame';
 import Header from '@/organisms/header';
 import { Poppins } from '@next/font/google';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 import '../styles/dist.css';
 import styles from './styles.module.scss';

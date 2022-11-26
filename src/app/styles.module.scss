@@ -22,7 +22,6 @@ $pad-large: 2.956rem;
   overflow: hidden;
   background-color: var(--c-bg);
   color: #fff;
-  white-space: nowrap;
   transition-property: background-color;
   transition-duration: 0.9s;
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
@@ -40,12 +39,7 @@ $pad-large: 2.956rem;
 }
 
 .inner-content {
-  position: relative;
   min-height: 100%;
-}
-
-// Home Page Styles
-.home-section {
   width: 100%;
   position: relative;
 
@@ -70,16 +64,52 @@ $pad-large: 2.956rem;
   }
 }
 
-.column {
-  flex: 50%;
-  width: 50%;
-  display: block;
-  flex-direction: column;
+.bio {
+  position: absolute;
+  height: calc(100vh - (2.956rem * 2));
+  display: flex;
+  align-items: flex-end;
+  right: calc(2.956rem * 2);
+
+  @media screen and (min-width: $large) {
+    width: 35%;
+  }
 }
 
-.name {
-  font-size: 4.5rem;
-  font-weight: 100;
-  line-height: 1;
-  letter-spacing: -3px;
+.bio-content {
+  width: 12rem;
+  display: block;
+  position: relative;
+
+  @media screen and (min-width: $large) {
+    width: 32rem;
+    bottom: 2.956rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media screen and (min-width: $large) {
+      font-size: 1.75rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-weight: 100;
+    font-size: 0.85rem;
+    transition-property: background-color;
+    transition-duration: 0.9s;
+    transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+
+    @media screen and (min-width: $large) {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+  }
 }
