@@ -3,3 +3,15 @@ export type NavItemType = {
   title: string;
   slug: string;
 };
+
+export type Bio = {
+  biographiesConnection: {
+    edges: {
+      node: {
+        content: {
+          raw: any;
+        };
+      };
+    }[];
+  };
+};

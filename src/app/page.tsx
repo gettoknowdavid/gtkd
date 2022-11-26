@@ -1,19 +1,8 @@
 import PageTitle from '@/atoms/page-title';
 import { hygraph } from '@/lib/api';
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import { Bio } from 'src/types';
 import styles from './styles.module.scss';
-
-type Bio = {
-  biographiesConnection: {
-    edges: {
-      node: {
-        content: {
-          raw: any;
-        };
-      };
-    }[];
-  };
-};
 
 async function getBio() {
   const data = await hygraph.request<Bio>(
