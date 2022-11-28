@@ -1,13 +1,24 @@
-import PageTitle from '@/atoms/page-title';
-import type { NextPage } from 'next';
+import { hygraph } from '@/lib/api';
+import ProjectList from '@/organisms/project-list';
+import { ProjectsQuery } from 'src/graphql/queries/projects.query';
+import { ProjectConn } from 'src/types';
+import styles from './styles.module.scss';
 
-const Page: NextPage = () => {
+async function getProjects() {
+  const data: ProjectConn = await hygraph.request(ProjectsQuery);
+  return data.projectsConnection.edges;
+}
+
+async function Page() {
+  const projects = await getProjects();
+
   return (
-    <section>
-      <PageTitle title="Works" />
-      <h1 style={{ fontSize: '2rem', paddingTop: '4rem' }}>Works Page</h1>
+    <section className={styles['works-page']}>
+      <div className={styles['works']}>
+        <ProjectList projects={projects} />
+      </div>
     </section>
   );
-};
+}
 
 export default Page;

@@ -1,6 +1,4 @@
-$height: 3.938rem;
-
-$main-color: black;
+$main-color: hsl(0, 0%, 5%);
 $accent-color: #f8da3d;
 $hover-color: #bdbdbd57;
 
@@ -8,9 +6,7 @@ $small: 280px;
 $medium: 600px;
 $large: 1024px;
 
-$pad-small: 2.956rem;
-$pad-medium: 2.956rem;
-$pad-large: 2.956rem;
+$pad: max(20px, 4vmin);
 
 // Layout Styles
 .layout {
@@ -20,66 +16,50 @@ $pad-large: 2.956rem;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: var(--c-bg);
+  background-color: $main-color;
   color: #fff;
+  // white-space: nowrap;
   transition-property: background-color;
   transition-duration: 0.9s;
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
 }
 
 .main-content {
+  display: block;
   position: fixed;
   z-index: 2;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   mix-blend-mode: difference;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .inner-content {
   min-height: 100%;
-  width: 100%;
   position: relative;
-
-  top: $pad-small;
-  right: $pad-small;
-  bottom: $pad-small;
-  left: $pad-small;
-
-  @media screen and (min-width: $medium) {
-    top: $pad-medium;
-    right: $pad-medium;
-    bottom: $pad-medium;
-    left: $pad-medium;
-  }
-
-  @media screen and (min-width: $large) {
-    display: flex;
-    top: $pad-large;
-    right: $pad-large;
-    bottom: $pad-large;
-    left: $pad-large;
-  }
+  transform: translate3d(0px, 0px, 0px);
 }
 
 .bio {
   position: absolute;
-  height: calc(100vh - (2.956rem * 2));
+  height: calc(100vh - ($pad * 2));
   display: flex;
   align-items: flex-end;
-  right: calc(2.956rem * 2);
-
-  @media screen and (min-width: $large) {
-    width: 35%;
-  }
+  right: calc($pad * 2);
 }
 
 .bio-content {
   width: 12rem;
   display: block;
   position: relative;
+  text-align: right;
 
   @media screen and (min-width: $large) {
     width: 32rem;

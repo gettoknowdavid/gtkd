@@ -1,6 +1,4 @@
-$pad-small: 1.428rem;
-$pad-medium: 1.428rem;
-$pad-large: 1.428rem;
+$pad: max(20px, 4vmin);
 
 @mixin frame-line {
   position: absolute;
@@ -10,25 +8,13 @@ $pad-large: 1.428rem;
 
 .frame {
   position: fixed;
-  z-index: 1;
-  top: $pad-small;
-  right: $pad-small;
-  bottom: $pad-small;
-  left: $pad-small;
+  z-index: 10;
+  left: $pad;
+  right: $pad;
+  top: $pad;
+  bottom: $pad;
   mix-blend-mode: difference;
-
-  @media screen and (min-width: 600px) {
-    top: $pad-medium;
-    right: $pad-medium;
-    bottom: $pad-medium;
-    left: $pad-medium;
-  }
-  @media screen and (min-width: 1024px) {
-    top: $pad-large;
-    right: $pad-large;
-    bottom: $pad-large;
-    left: $pad-large;
-  }
+  pointer-events: none;
 }
 
 .frame-line-top {

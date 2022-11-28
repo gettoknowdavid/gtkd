@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-head-element */
+import Mask from '@/atoms/mask';
 import Frame from '@/molecules/frame';
 import Header from '@/organisms/header';
 import { Poppins } from '@next/font/google';
-import { usePathname } from 'next/navigation';
 import React from 'react';
 import '../styles/dist.css';
 import styles from './styles.module.scss';
@@ -21,7 +21,8 @@ export default function RootLayout(props: Props) {
       <body>
         <div className={styles['layout']}>
           <Header />
-          {/* <Frame /> */}
+          <Mask />
+          <Frame />
           <main className={styles['main-content']}>
             <div className={styles['inner-content']}>{props.children}</div>
           </main>

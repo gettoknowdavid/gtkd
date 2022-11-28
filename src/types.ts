@@ -15,3 +15,31 @@ export type Bio = {
     }[];
   };
 };
+
+export type LinkT = {
+  id: string;
+  title: string;
+  url: string;
+};
+
+export type ProjectConn = {
+  projectsConnection: {
+    edges: {
+      node: {
+        id: string;
+        title: string;
+        description: string;
+        frameworks: string;
+        links: LinkT[];
+      };
+    }[];
+  };
+};
+
+export type ProjectT = {
+  id: string;
+  title: string;
+  description: string;
+  frameworks: string;
+  links: LinkT[];
+};

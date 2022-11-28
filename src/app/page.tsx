@@ -1,4 +1,3 @@
-import PageTitle from '@/atoms/page-title';
 import { hygraph } from '@/lib/api';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { BiographiesQuery } from 'src/graphql/queries';
@@ -15,7 +14,6 @@ export default async function Page() {
 
   return (
     <section>
-      <PageTitle title="Home" />
       <div className={styles['bio']}>
         <div className={styles['bio-content']}>
           <h1>Gettoknowdavid</h1>

@@ -1,0 +1,228 @@
+$main-color: black;
+$accent-color: #f8da3d;
+$hover-color: #bdbdbd57;
+
+$small: 280px;
+$medium: 600px;
+$large: 1024px;
+
+@mixin link-styles {
+  margin-left: 1.2rem;
+  transition-duration: 0.9s;
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+
+  a {
+    height: 1rem;
+    display: flex;
+    font-size: 0.65rem;
+    font-weight: 500;
+    // margin-bottom: 0.85rem;
+
+    @media screen and (min-width: $large) {
+      font-size: 0.67rem;
+    }
+
+    img {
+      height: 1rem;
+      width: 1rem;
+      margin-right: 4px;
+      filter: opacity(0.5) drop-shadow(0 0 0 white) drop-shadow(0 0 0 white)
+        drop-shadow(0 0 0 white);
+    }
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.project-item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  column-gap: 1rem;
+
+  div {
+    div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      div {
+        display: none;
+
+        @media screen and (min-width: $medium) {
+          display: flex;
+        }
+
+        @media screen and (min-width: $large) {
+          display: flex;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          margin-right: 2rem;
+
+          li {
+            @include link-styles;
+          }
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 0.8;
+
+        @media screen and (min-width: $medium) {
+          font-size: 3.75rem;
+        }
+
+        @media screen and (min-width: $large) {
+          font-size: 4.75rem;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.5rem;
+
+      p {
+        font-size: 0.65rem;
+        font-weight: 200;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        white-space: initial;
+
+        @media screen and (min-width: $medium) {
+          font-size: 0.75rem;
+        }
+
+        @media screen and (min-width: $large) {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media screen and (min-width: $medium) {
+        width: 100%;
+        margin-top: 0.85rem;
+      }
+
+      @media screen and (min-width: $large) {
+        width: 100%;
+        margin-top: 0.85rem;
+      }
+    }
+
+    div {
+      ul {
+        display: flex;
+
+        @media screen and (min-width: $medium) {
+          display: none;
+        }
+
+        @media screen and (min-width: $large) {
+          display: none;
+        }
+
+        li {
+          @include link-styles;
+        }
+      }
+    }
+  }
+}
+
+.frameworks {
+  font-size: 0.5rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @media screen and (min-width: $large) {
+    font-size: 0.65rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+// Skeletons
+.skeleton-link {
+  @media screen and (min-width: $medium) {
+    height: 0.875rem;
+    width: 3.125rem;
+    margin-right: 2rem;
+  }
+
+  @media screen and (min-width: $large) {
+    height: 0.8rem;
+    width: 3.125rem;
+    margin-right: 2rem;
+  }
+}
+
+.skeleton-link-small {
+  height: 0.875rem;
+  width: 3.125rem;
+
+  @media screen and (min-width: $medium) {
+    display: none;
+  }
+
+  @media screen and (min-width: $large) {
+    display: none;
+  }
+}
+
+.skeleton-title {
+  height: 1.563rem;
+  width: 11.25rem;
+
+  @media screen and (min-width: $medium) {
+    height: 5rem;
+    width: 25rem;
+  }
+
+  @media screen and (min-width: $large) {
+    height: 5rem;
+    width: 25rem;
+  }
+}
+
+.skeleton-desc {
+  height: 1.956rem;
+  width: 15rem;
+
+  @media screen and (min-width: $medium) {
+    height: 1rem;
+    width: 37.5rem;
+  }
+
+  @media screen and (min-width: $large) {
+    height: 1rem;
+    width: 37.5rem;
+  }
+}
+
+.skeleton-frameworks {
+  height: 0.688rem;
+  width: 10.5rem;
+
+  @media screen and (min-width: $medium) {
+    height: 0.875rem;
+    width: 18.75rem;
+  }
+
+  @media screen and (min-width: $large) {
+    height: 0.875rem;
+    width: 18.75rem;
+  }
+}
