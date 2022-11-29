@@ -1,0 +1,59 @@
+.experience-item {
+  font-size: 0.917rem;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      font-weight: bold;
+
+      .location {
+        font-style: italic;
+      }
+    }
+
+    .date {
+      font-weight: initial;
+
+      .start {
+        margin-right: 4px;
+      }
+      .end {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .job-title {
+    font-weight: 600;
+    margin-top: 0rem;
+    margin-bottom: 0;
+  }
+
+  .summary {
+    margin-block: 0.4rem;
+  }
+}
+
+.p {
+  margin: 0.2rem 0;
+}
+
+// Bullets (ul)
+.b {
+  padding-left: 2rem;
+  display: grid;
+  list-style-type: initial;
+}
+
+// Bullet items (li)
+.bi {
+  font-family: "Georgia";
+  font-size: 0.917rem;
+  margin: 0;
+  display: inline-list-item;
+  align-items: center;
+  height: 100%;
+  line-height: 1.4;
+}

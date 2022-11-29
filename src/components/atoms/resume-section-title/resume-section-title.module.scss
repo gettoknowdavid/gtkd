@@ -1,0 +1,25 @@
+@mixin section-title-styles {
+  font-family: "Georgia";
+  font-size: 1.167rem;
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  color: #2e74b5;
+}
+
+.section-title-center {
+  @include section-title-styles;
+  text-align: center;
+}
+
+.section-title-left {
+  @include section-title-styles;
+  text-align: left;
+}
+
+.divider {
+  height: 1px;
+  width: "100%";
+  position: relative;
+  background-color: rgba(109, 109, 109, 0.424);
+}

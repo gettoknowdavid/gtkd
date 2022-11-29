@@ -1,0 +1,177 @@
+$pad: max(20px, 4vmin);
+
+$main-color: black;
+$accent-color: #f8da3d;
+$hover-color: #bdbdbd57;
+
+$small: 280px;
+$medium: 600px;
+$large: 1024px;
+
+.p {
+  margin: 0.2rem 0;
+}
+
+.ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  font-family: "Georgia";
+  font-size: 1rem;
+  margin: 0 6px 0 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-height: 1.8rem;
+
+  &::after {
+    content: " • ";
+    margin-left: 6px;
+  }
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.a {
+  color: skyblue;
+}
+
+// Bullets list (ul)
+.b {
+  padding-left: 2rem;
+  display: grid;
+  list-style-type: initial;
+}
+
+// Bullets item (li)
+.bi {
+  font-family: "Georgia";
+  font-size: 0.917rem;
+  margin: 0;
+  display: inline-list-item;
+  align-items: center;
+  height: 100%;
+  line-height: 1.4;
+}
+
+// Main Skills Item (li)
+.ms {
+  font-family: "Georgia";
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 6px 0 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  &::after {
+    content: " | ";
+    margin-left: 6px;
+  }
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
+}
+
+//////////////////////////////////////
+
+.resume-page {
+  position: relative;
+  display: block;
+  opacity: 1;
+  width: 100%;
+  min-height: calc(var($pad, 1vh) * 100);
+}
+
+.resume {
+  position: relative;
+  padding: calc($pad * 2 + 230px) calc($pad * 2);
+  text-align: right;
+
+  @media screen and (min-width: $large) {
+    padding: calc($pad * 2 + 150px) calc($pad * 2);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.resume-content {
+  font-family: "Georgia";
+  background-color: rgba(55, 55, 55, 0.424);
+  max-width: 100%;
+  text-align: left;
+  width: 100%;
+  padding: 0.85rem;
+
+  @media screen and (min-width: $medium) {
+    padding: 1.667rem;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+@mixin resume-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.resume-experience-list {
+  @include resume-list;
+  margin-top: 1rem;
+  row-gap: 2rem;
+}
+
+.divider {
+  height: 1px;
+  width: "100%";
+  position: relative;
+  background-color: rgba(109, 109, 109, 0.424);
+}
+
+.name {
+  font-family: "Georgia";
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 0 0.25rem 0;
+
+  @media screen and (min-width: $medium) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 2.5rem;
+  }
+}
+
+.contact {
+  margin: 0.85rem 0 0 0;
+}
+
+.main-skills,
+.languages,
+.professional-skills,
+.volunteer-skills {
+  margin-block: 0.75rem;
+}
+
+.summary {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
