@@ -175,3 +175,16 @@ $large: 1024px;
   margin: 0;
   line-height: 1.6;
 }
+
+.skeleton {
+  height: 187.5rem;
+  width: 19.375rem;
+
+  @media screen and (min-width: $medium) {
+    width: 43.05rem;
+  }
+
+  @media screen and (min-width: $large) {
+    width: 55.29rem;
+  }
+}
