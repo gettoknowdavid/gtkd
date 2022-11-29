@@ -3,7 +3,7 @@ import { hygraph } from '@/lib/api';
 import EducationItem from '@/molecules/education-item';
 import ExperienceItem from '@/molecules/experience-item';
 import { RichText } from '@graphcms/rich-text-react-renderer';
-import { ResumeQuery } from 'src/graphql/queries/resume.query';
+import { ResumeQuery } from 'src/graphql/queries';
 import { ResumeConn } from 'src/types';
 import styles from './styles.module.scss';
 

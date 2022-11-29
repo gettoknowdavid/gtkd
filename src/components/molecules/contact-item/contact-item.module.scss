@@ -1,0 +1,53 @@
+$main-color: black;
+$hover-color: #bdbdbd57;
+
+$medium: 600px;
+$large: 1024px;
+
+.contact-item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  column-gap: 2rem;
+
+  a {
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 100;
+      line-height: 0.8;
+
+      @media screen and (min-width: $medium) {
+        font-size: 3.75rem;
+      }
+
+      @media screen and (min-width: $large) {
+        font-size: 4.75rem;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.skeleton-title {
+  height: 1.563rem;
+  width: 11.25rem;
+
+  @media screen and (min-width: $medium) {
+    height: 3.8rem;
+    width: 25rem;
+  }
+
+  @media screen and (min-width: $large) {
+    height: 3.8rem;
+    width: 25rem;
+  }
+}

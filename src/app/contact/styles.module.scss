@@ -1,0 +1,47 @@
+$pad: max(20px, 4vmin);
+
+$main-color: black;
+$accent-color: #f8da3d;
+$hover-color: #bdbdbd57;
+
+$small: 280px;
+$medium: 600px;
+$large: 1024px;
+
+.contact-page {
+  position: relative;
+  display: block;
+  opacity: 1;
+  width: 100%;
+  min-height: calc(var($pad, 1vh) * 100);
+}
+
+.contact {
+  position: relative;
+  padding: calc($pad * 2 + 96px) calc($pad * 2);
+  text-align: right;
+
+  @media screen and (min-width: $large) {
+    padding: calc($pad * 2 + 100px) calc($pad * 2);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 3rem;
+  margin-top: 16rem;
+
+  @media screen and (min-width: $medium) {
+    margin-top: 25rem;
+    row-gap: 2.75rem;
+  }
+
+  @media screen and (min-width: $large) {
+    margin-top: 7rem;
+    row-gap: 2.75rem;
+  }
+}

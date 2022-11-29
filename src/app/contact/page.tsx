@@ -1,11 +1,28 @@
-import type { NextPage } from 'next';
+import { hygraph } from '@/lib/api';
+import ContactItem from '@/molecules/contact-item';
+import { ContactsQuery } from 'src/graphql/queries';
+import { ContactsConn } from 'src/types';
+import styles from './styles.module.scss';
 
-const Page: NextPage = () => {
+async function getContacts() {
+  const data: ContactsConn = await hygraph.request(ContactsQuery);
+  return data.contactsConnection.edges;
+}
+
+async function Page() {
+  const contacts = await getContacts();
+
   return (
-    <section>
-      <h1 style={{ fontSize: '2rem', paddingTop: '4rem' }}>Contacts Page</h1>
+    <section className={styles['contact-page']}>
+      <div className={styles.contact}>
+        <ul className={styles['contacts-list']}>
+          {contacts.map((contact) => (
+            <ContactItem key={contact.node.id} contact={contact.node} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
-};
+}
 
 export default Page;

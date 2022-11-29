@@ -98,3 +98,17 @@ export type HygraphAssetT = {
   fileName: string;
   url: string;
 };
+
+export type ContactT = {
+  id: string;
+  title: string;
+  link: string;
+};
+
+export type ContactsConn = {
+  contactsConnection: {
+    edges: {
+      node: ContactT;
+    }[];
+  };
+};
