@@ -27,19 +27,15 @@
     "graphql-request": "^5.0.0",
     "gsap": "^3.11.3",
     "next": "latest",
-    "normalize.css": "^8.0.1",
-    "phosphor-react": "^1.4.1",
     "react": "latest",
     "react-dom": "latest",
     "react-loading-skeleton": "^3.1.0",
-    "sass": "^1.56.1",
-    "styled-components": "^5.3.6"
+    "sass": "^1.56.1"
   },
   "devDependencies": {
     "@types/node": "18.11.7",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
-    "@types/styled-components": "^5.1.26",
     "autoprefixer": "^10.4.13",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.0",

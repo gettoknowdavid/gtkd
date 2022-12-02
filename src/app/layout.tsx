@@ -26,6 +26,9 @@ export default function RootLayout(props: Props) {
           <main className={styles['main-content']}>
             <div className={styles['inner-content']}>{props.children}</div>
           </main>
+          <div className={styles.inspiration}>
+            <p>Inspired by Keita Yamada</p>
+          </div>
         </div>
       </body>
     </html>
