@@ -80,6 +80,16 @@ $pad: max(20px, 4vmin);
   position: relative;
   text-align: right;
 
+  .skeleton-bio {
+    height: 21.625rem;
+    width: 11rem;
+
+    @media screen and (min-width: $large) {
+      height: 11.895rem;
+      width: 32rem;
+    }
+  }
+
   @media screen and (min-width: $large) {
     width: 32rem;
     bottom: 2.956rem;
@@ -95,6 +105,16 @@ $pad: max(20px, 4vmin);
     @media screen and (min-width: $large) {
       font-size: 1.75rem;
       letter-spacing: 2px;
+    }
+
+    .skeleton-name {
+      height: 1.5rem;
+      width: 9rem;
+
+      @media screen and (min-width: $large) {
+        height: 2.625rem;
+        width: 16.25rem;
+      }
     }
   }
 
