@@ -132,3 +132,41 @@ $pad: max(20px, 4vmin);
     }
   }
 }
+
+// Error Page
+.error-page {
+  position: relative;
+  display: block;
+  opacity: 1;
+  width: 100%;
+  min-height: calc(var($pad, 1vh) * 100);
+}
+
+.error {
+  position: relative;
+  padding: calc($pad * 2 + 96px) calc($pad * 2);
+  text-align: right;
+  margin-top: 16rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+
+  p {
+    font-weight: 100;
+  }
+
+  @media screen and (min-width: $large) {
+    padding: calc($pad * 2 + 125px) calc($pad * 2);
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 100;
+    }
+
+    p {
+      font-weight: 100;
+    }
+  }
+}
