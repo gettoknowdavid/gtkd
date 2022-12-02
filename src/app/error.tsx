@@ -6,10 +6,7 @@ import styles from './styles.module.scss';
 type Props = { error: Error; reset: () => void };
 
 export default function Error(props: Props) {
-  React.useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(props.error);
-  }, [props.error]);
+ 
 
   return (
     <section>
