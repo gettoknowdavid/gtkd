@@ -3,7 +3,7 @@
 import Skeleton from '@/atoms/skeletons';
 import styles from './styles.module.scss';
 
-function Loading() {
+function HomeLoading() {
   return (
     <section>
       <div className={styles['bio']}>
@@ -18,4 +18,4 @@ function Loading() {
   );
 }
 
-export default Loading;
+export default HomeLoading;

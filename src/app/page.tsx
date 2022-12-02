@@ -9,7 +9,7 @@ async function getBiography() {
   return data.biographiesConnection?.edges[0].node;
 }
 
-export default async function Page() {
+export default async function HomePage() {
   const bio = await getBiography();
 
   return (

@@ -3,7 +3,7 @@
 import Skeleton from '@/atoms/skeletons';
 import styles from './styles.module.scss';
 
-function Loading() {
+function ResumeLoading() {
   return (
     <section className={styles['resume-page']}>
       <div className={styles['resume']}>
@@ -13,4 +13,4 @@ function Loading() {
   );
 }
 
-export default Loading;
+export default ResumeLoading;

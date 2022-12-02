@@ -1,7 +1,7 @@
 import { ProjectListSkeleton } from '@/organisms/project-list/project-list-skeleton';
 import styles from './styles.module.scss';
 
-function Loading() {
+function WorksLoading() {
   return (
     <section className={styles['works-page']}>
       <div className={styles['works']}>
@@ -13,4 +13,4 @@ function Loading() {
   );
 }
 
-export default Loading;
+export default WorksLoading;

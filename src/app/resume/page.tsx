@@ -12,7 +12,7 @@ async function getResume() {
   return data.resumesConnection.edges[0].node;
 }
 
-async function Page() {
+async function ResumePage() {
   const resume = await getResume();
 
   return (
@@ -99,4 +99,4 @@ async function Page() {
   );
 }
 
-export default Page;
+export default ResumePage;

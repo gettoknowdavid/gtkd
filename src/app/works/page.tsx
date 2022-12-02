@@ -9,7 +9,7 @@ async function getProjects() {
   return data.projectsConnection.edges;
 }
 
-async function Page() {
+async function WorksPage() {
   const projects = await getProjects();
 
   return (
@@ -21,4 +21,4 @@ async function Page() {
   );
 }
 
-export default Page;
+export default WorksPage;

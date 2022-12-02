@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 let skeletons = Array(5).fill(0);
 
-function Loading() {
+function ContactLoading() {
   return (
     <section className={styles['contact-page']}>
       <div className={styles['contact']}>
@@ -19,4 +19,4 @@ function Loading() {
   );
 }
 
-export default Loading;
+export default ContactLoading;

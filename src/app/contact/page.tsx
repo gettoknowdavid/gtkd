@@ -9,7 +9,7 @@ async function getContacts() {
   return data.contactsConnection.edges;
 }
 
-async function Page() {
+async function ContactPage() {
   const contacts = await getContacts();
 
   return (
@@ -25,4 +25,4 @@ async function Page() {
   );
 }
 
-export default Page;
+export default ContactPage;
